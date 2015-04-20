@@ -1,0 +1,46 @@
+<section id="testimonial" class="testimonial-section section-gray section">
+
+        <div class="section-background">
+
+          <!-- IMAGE BACKGROUND -->
+          <div class="section-background-image parallax-background" data-stellar-background-ratio="0.4"></div>
+
+        </div>
+
+        <div class="container">
+
+          <h2 class="section-heading text-center">Trusted by Thousands</h2>
+
+          <!-- <div class="sponsors-row" data-animation="bounceIn">
+            <img src="assets/sponsor-1.png" alt="">
+            <img src="assets/sponsor-2.png" alt="">
+            <img src="assets/contents/sponsor-3.png" alt="">
+            <img src="assets/contents/sponsor-4.png" alt="">
+          </div> -->
+
+          <div class="testimonial-row row">
+
+            <!-- TESTIMONIAL ITEM 1 -->
+            <% @trusted.each do |f| %>
+            <div class="col-sm-6">
+              <div class="testimonial">
+                <blockquote class="testimonial-quote">
+                  <p><%= raw f.description %></p>
+                </blockquote>
+                <span class="testimonial-ratings">
+                   
+              <% (0..f.rating).each do |i| %>
+                  <span class="fa fa-star"></span>
+                  
+              <% end %>                
+                </span>
+                <cite class="testimonial-cite"><%= raw f.name %>, <%= raw f.company %>.</cite>
+              </div>
+            </div>
+            <% end %>
+
+          </div>
+
+        </div>
+
+      </section>
